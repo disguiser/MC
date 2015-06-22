@@ -1,0 +1,185 @@
+---- Minecraft Crash Report ----
+// Would you like a cupcake?
+
+Time: 6/21/15 11:19 PM
+Description: Watching Server
+
+java.lang.Error
+	at cj.a(SourceFile:157)
+	at cj.c(SourceFile:104)
+	at cj.b(SourceFile:99)
+	at adu.b(SourceFile:93)
+	at adu.a(SourceFile:59)
+	at lx.a(SourceFile:514)
+	at lx.a(SourceFile:449)
+	at lf.c(SourceFile:428)
+	at pk.K(SourceFile:303)
+	at pr.K(SourceFile:176)
+	at pk.t_(SourceFile:266)
+	at pr.t_(SourceFile:1265)
+	at wn.t_(SourceFile:277)
+	at lf.l(SourceFile:250)
+	at lm.a(SourceFile:301)
+	at ip.a(SourceFile:126)
+	at ip.a(SourceFile:8)
+	at fh$1.run(SourceFile:13)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at g.a(SourceFile:60)
+	at net.minecraft.server.MinecraftServer.B(SourceFile:579)
+	at ko.B(SourceFile:299)
+	at net.minecraft.server.MinecraftServer.A(SourceFile:535)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:451)
+	at java.lang.Thread.run(Thread.java:724)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at cj.a(SourceFile:157)
+	at cj.c(SourceFile:104)
+	at cj.b(SourceFile:99)
+	at adu.b(SourceFile:93)
+	at adu.a(SourceFile:59)
+	at lx.a(SourceFile:514)
+	at lx.a(SourceFile:449)
+	at lf.c(SourceFile:428)
+	at pk.K(SourceFile:303)
+	at pr.K(SourceFile:176)
+	at pk.t_(SourceFile:266)
+	at pr.t_(SourceFile:1265)
+	at wn.t_(SourceFile:277)
+	at lf.l(SourceFile:250)
+	at lm.a(SourceFile:301)
+	at ip.a(SourceFile:126)
+	at ip.a(SourceFile:8)
+	at fh$1.run(SourceFile:13)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at g.a(SourceFile:60)
+	at net.minecraft.server.MinecraftServer.B(SourceFile:579)
+	at ko.B(SourceFile:299)
+	at net.minecraft.server.MinecraftServer.A(SourceFile:535)
+
+-- Thread Dump --
+Details:
+	Threads: "File IO Thread" Id=22 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at auc.c(SourceFile:51)
+	at auc.run(SourceFile:30)
+	at java.lang.Thread.run(Thread.java:724)
+
+
+"Netty Server IO #1" Id=18 BLOCKED on java.util.ArrayDeque@13a031 owned by "Server thread" Id=11
+	at net.minecraft.server.MinecraftServer.a(SourceFile:1274)
+	-  blocked on java.util.ArrayDeque@13a031
+	at net.minecraft.server.MinecraftServer.a(SourceFile:1291)
+	at le.a(SourceFile:978)
+	at fh.a(SourceFile:10)
+	at lm.a(SourceFile:194)
+	at ip.a(SourceFile:126)
+	at ip$c.a(SourceFile:88)
+	at ek.a(SourceFile:125)
+	...
+
+
+"Server Watchdog" Id=20 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:446)
+	at kp.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:724)
+
+
+"Netty Server IO #0" Id=17 BLOCKED on java.util.ArrayDeque@13a031 owned by "Server thread" Id=11
+	at net.minecraft.server.MinecraftServer.a(SourceFile:1274)
+	-  blocked on java.util.ArrayDeque@13a031
+	at net.minecraft.server.MinecraftServer.a(SourceFile:1291)
+	at le.a(SourceFile:978)
+	at fh.a(SourceFile:10)
+	at lm.a(SourceFile:194)
+	at ip.a(SourceFile:126)
+	at ip$a.a(SourceFile:57)
+	at ek.a(SourceFile:125)
+	...
+
+
+"Server console handler" Id=14 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:272)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:273)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:334)
+	-  locked java.io.BufferedInputStream@79f207
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:283)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:325)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:177)
+	-  locked java.io.InputStreamReader@dc688a
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"DestroyJavaVM" Id=13 RUNNABLE
+
+
+"Server thread" Id=11 RUNNABLE
+	at cj.a(SourceFile:157)
+	at cj.c(SourceFile:104)
+	at cj.b(SourceFile:99)
+	at adu.b(SourceFile:93)
+	at adu.a(SourceFile:59)
+	at lx.a(SourceFile:514)
+	at lx.a(SourceFile:449)
+	at lf.c(SourceFile:428)
+	...
+
+
+"Server Infinisleeper" Id=10 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at ko$1.run(SourceFile:65)
+
+
+"Snooper Timer" Id=9 TIMED_WAITING on java.util.TaskQueue@536893
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@536893
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@1f69b79
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@1f69b79
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:189)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@15947ca
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@15947ca
+	at java.lang.Object.wait(Object.java:503)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+
+
+
+Stacktrace:
+	at kp.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:724)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.4
+	Operating System: Linux (i386) version 2.6.32-431.23.3.el6.i686
+	CPU: 1x Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz
+	Java Version: 1.7.0_40, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode, sharing), Oracle Corporation
+	Memory: 4772912 bytes (4 MB) / 259522560 bytes (247 MB) up to 259522560 bytes (247 MB)
+	JVM Flags: 2 total; -Xmx256M -Xms256M
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Profiler Position: N/A (disabled)
+	Player Count: 2 / 17; [lf['Ferroconcrete'/928, l='skarn', x=34.00, y=73.00, z=111.00], lf['mingshuai'/407, l='skarn', x=42.02, y=69.00, z=86.38]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

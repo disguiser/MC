@@ -1,0 +1,26 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 6/21/15 11:28 PM
+Description: Exception in server tick loop
+
+java.lang.OutOfMemoryError: Java heap space
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.4
+	Operating System: Linux (i386) version 2.6.32-431.23.3.el6.i686
+	CPU: 1x Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz
+	Java Version: 1.7.0_40, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode, sharing), Oracle Corporation
+	Memory: 68624 bytes (0 MB) / 259522560 bytes (247 MB) up to 259522560 bytes (247 MB)
+	JVM Flags: 2 total; -Xmx256M -Xms256M
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Profiler Position: N/A (disabled)
+	Player Count: 2 / 17; [lf['mingshuai'/387, l='skarn', x=8.24, y=73.00, z=16.52], lf['Ferroconcrete'/425, l='skarn', x=41.42, y=69.00, z=87.76]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
